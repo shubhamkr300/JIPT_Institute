@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="InstituteData">
+  <DataContextMoniker Name="/InstituteDataDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c76e8d9f-eb98-4eb9-9b59-439ab02e75e5" absoluteBounds="3.75, 1.375, 2, 1.3862939453125">
+      <DataClassMoniker Name="/InstituteDataDataContext/tblImage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4dd2fce9-96aa-427a-8260-f806e05f13cc" absoluteBounds="3.765, 1.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6cfcbf63-da71-452a-a029-9af300e6ed3a" absoluteBounds="6.125, 3, 2, 1.3862939453125">
+      <DataClassMoniker Name="/InstituteDataDataContext/tbVideo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7ccaaa5a-306f-43a4-89cf-a3d88a1d8fd5" absoluteBounds="6.14, 3.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="742cf589-a4ef-4a77-9d75-5a2e1eab038b" absoluteBounds="3.625, 3.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/InstituteDataDataContext/tblCarousel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="da3fc2eb-a2a3-431b-a082-27fbc5e7abc8" absoluteBounds="3.64, 3.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="91eb570f-1cbb-441a-ad67-7b9084d5a48f" absoluteBounds="0.5, 0.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/InstituteDataDataContext/tblstudent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f1cca270-cd8c-4523-ab6a-7a76d2dcb485" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

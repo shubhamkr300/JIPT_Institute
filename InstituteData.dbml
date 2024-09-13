@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="InstituteDb" Class="InstituteDataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.tblImages" Member="tblImages">
+    <Type Name="tblImage">
+      <Column Name="cid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ImgName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ImgPath" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbVideos" Member="tbVideos">
+    <Type Name="tbVideo">
+      <Column Name="vid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VdName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="VdPath" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblCarousel" Member="tblCarousels">
+    <Type Name="tblCarousel">
+      <Column Name="cid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="cName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="imgPath" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblstudent" Member="tblstudents">
+    <Type Name="tblstudent">
+      <Column Name="sid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Age" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

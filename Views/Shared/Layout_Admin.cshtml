@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="~/component/admin_component/inst.css">
+    <link rel="stylesheet" href="~/component/admin_component/style.css">
+    <link rel="stylesheet" href="~/component/admin_component/script.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="sidebar" id="sidebar">
+        <div class="col-auto min-vh-100">
+            <div class="logo d-flex justify-content-between">
+                <div class="pt-4 pb-1 px-1 profile">
+                    <i class="fa-solid fs-2 me-2">
+                        <img src="~/component/admin_component/img/Shubham.jpg" alt="#">
+                    </i>
+                </div>
+                <hr class="text-white">
+
+            </div>
+            <ul class="nav nav-pills flex-column mb-auto" id="sidebar_menu">
+                <li class="nav-item">
+                    <a class="has-arrow nav-link active" href="@Url.Action("Index","Admin")" aria-expanded="false">
+                        <div class="nav_icon_small">
+                            <i class="fa-solid fa-dashboard me-2"></i>
+                        </div>
+                        <div class="nav_title">
+                            <span class="d-none d-sm-inline">Dashboard </span>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="has-arrow nav-link" href="@Url.Action("Carousel","Admin")" aria-expanded="false">
+                        <div class="nav_icon_small">
+                            <i class="fa-solid fa-image me-2"></i>
+                        </div>
+                        <div class="nav_title">
+                            <span class="d-none d-sm-inline">Carousel</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <div class="nav_title">
+                        <a href="" class="nav-link" data-bs-toggle="collapse" data-bs-target="#submenu"
+                           aria-expanded="false" aria-controls="submenu">
+                            <i class="bi bi-images"></i>
+                            <span class="d-none d-sm-inline">
+                                Gallery
+                                <i class="fa fa-caret-down"></i>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="sub-menu collapse" id="submenu">
+                        <a class="nav-link" href="@Url.Action("Images","Admin")">
+                            <span class="icon">
+                                <i class="fa fa-image"></i>
+                                <span class="d-none d-sm-inline">Images</span>
+                            </span>
+                        </a>
+                        <a class="nav-link" href="@Url.Action("Videos","Admin")">
+                            <span class="icon">
+                                <i class="fa fa-video"></i>
+                                <span class="d-none d-sm-inline">Videos</span>
+                            </span>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="has-arrow nav-link" href="" aria-expanded="false">
+                        <div class="nav_icon_small">
+                            <i class="fa-solid fa-user-circle me-2"></i>
+                        </div>
+                        <div class="nav_title">
+                            <span class="d-none d-sm-inline">Users</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="has-arrow nav-link" href="" aria-expanded="false">
+                        <div class="nav_icon_small">
+                            <i class="fa-solid fa-th me-2"></i>
+                        </div>
+                        <div class="nav_title">
+                            <span class="d-none d-sm-inline">About</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="has-arrow nav-link" href="" aria-expanded="false">
+                        <div class="nav_icon_small">
+                            <i class="fa-solid fa-contacts me-2"></i>
+                        </div>
+                        <div class="nav_title">
+                            <span class="d-none d-sm-inline">Contact</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="main_content dashboard_part large_header_bg">
+
+        <div class="container-fluid g-0">
+            <div class="row">
+                <div class="col-lg-12 p-0 ">
+                    <div class="header_iner d-flex justify-content-between align-items-center"
+                         style="background-color:green;">
+                        <div class="sidebar_icon d-lg-none">
+                            <i class="ti-menu">
+                                <span class="menu-toggle" onclick="toggleSidebar()">☰</span>
+                            </i>
+                        </div>
+                        <div class="line_icon open_miniSide d-none d-lg-block">
+                            <img src="~/component/admin_component/img/line_img.png" alt="">
+                        </div>
+                        <div class="header_right d-flex justify-content-between align-items-center">
+                            <div class="header_notification_warp d-flex align-items-center">
+
+                            </div>
+                            <div class="profile_info d-flex align-items-center">
+                                <div class="profile_thumb mr_20">
+                                    <img src="~/component/admin_component/img/profile/Shubham_kumar.jpg" alt="#">
+                                </div>
+                                <div class="author_name">
+                                    <h4 class="f_s_15 f_w_500 mb-0">Shubham Kumar</h4>
+                                    <p class="f_s_12 f_w_400">Admin</p>
+                                </div>
+                                <div class="profile_info_iner">
+                                    <div class="profile_author_name">
+                                        <p>Admin</p>
+                                    </div>
+                                    <div class="profile_info_details">
+                                        <a href="#">My Profile </a> <a href="#">Settings</a> <a href="@Url.Action()">
+                                            Log
+                                            Out
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            @RenderBody()
+        </div>
+
+    </section>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

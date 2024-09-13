@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Gallery";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-info text-center">Gallery<hr style="height: 10px;color: black;"></h1>
+            </div>
+
+            <div class="col-md-12">
+                <h1 class="text-success">Festivals:<hr style="height: 10px;color: black;"></h1>
+            </div>
+
+            @foreach (var item in Model.ImgList)
+            {
+                <div class="col-md-4 mb-5 getimage" data-images="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="card" width="">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="@Url.Content(item.getImage)" class="card-img-top" height="270px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <div class="col-md-12">
+                <h1 class="text-success">Videos<hr style="height: 10px;color: black;"></h1>
+            </div>
+
+            @foreach (var item in Model.VdoList)
+            {
+                <div class="col-md-4 mb-5 getimage" data-images="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="card" width="">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <video src="@Url.Content(item.getImage)" class="card-img-top" height="270px" controls></video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</section>
+
+

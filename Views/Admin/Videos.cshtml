@@ -1,0 +1,91 @@
+﻿@model JIPT_Institute.Models.GalleryModel
+
+@{
+    ViewBag.Title = "Videos";
+    Layout = "~/Views/Shared/Layout_Admin.cshtml";
+}
+
+<div class="main_content_iner overly_inner ">
+    <div class="container-fluid p-0 ">
+
+        <div class="row">
+            <div class="col-12">
+                <div class="page_title_box d-flex flex-wrap align-items-center justify-content-between">
+                    <div class="page_title_left">
+                        <h3 class="mb-0">Videos</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="background:#69e2e1">
+                    <div class="card-body">
+                        <h3>Add Videos</h3>
+                        <br>
+
+                        @using (Ajax.BeginForm("Videos", "Admin", new AjaxOptions { OnSuccess = "Success", OnFailure = "Fail" }, new { id = "formsubmit", @class = "form-horizontal", enctype = "multipart/form-data" }))
+                        {
+                            @Html.AntiForgeryToken()
+
+
+                            <div class="col-md-12">
+                                @*@Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                                @Html.EditorFor(model => model.name, new { htmlAttributes = new { @class = "form-control", required = "required", @placeholder = "Enter Name" } })
+                                @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+                            </div>
+                            <br />
+
+                            <br />
+                            <div class="col-md-12">
+                                @*@Html.LabelFor(model => model.ImgPath, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                                <input type="file" name="ImgPath" class="form-control" placeholder="Upload Image" />
+                                @Html.ValidationMessageFor(model => model.ImgPath, "", new { @class = "text-danger" })
+                            </div>
+                            <br />
+                            <div class="col-md-12">
+                                <input type="hidden" name="id" value="">
+
+                                <button type="Submit" class="btn_1 full_width text-center" @*onclick="displayAlert()"*@
+                                        name="btn" value="Add">
+                                    Add
+                                </button>
+                                <button type="Reset" class="btn_1 full_width text-center"
+                                        name="btn" value="">
+                                    Reset
+                                </button>
+                            </div>
+                            @Html.ViewData["Message"]
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card" style="background:#69e2e1">
+                    <div class="card-body">
+                        <h3>Product List</h3>
+                        <br>
+                        <div class="col-md-10">
+                            <table id="imgTable" class="display">
+                                <thead>
+                                    <tr style="background-color:red">
+                                        <th>Sno.</th>
+                                        <th>Img Id</th>
+                                        <th>Image name</th>
+                                        <th>Img path</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br /><br />
+        <div class="col-md-5">
+            <a href="@Url.Action("Menu", "Web")" class="btn_1 full_width text-center">Back to menu</a>
+        </div>
+    </div>
+</div>
+

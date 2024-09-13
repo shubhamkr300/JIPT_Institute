@@ -1,0 +1,110 @@
+.header_section{
+    border-bottom:15px solid green;
+}
+
+.header_top{
+    background-color: aqua;
+}
+
+.header_top .header_top_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_bottom{
+    padding: 15px 0;
+}
+
+.header_bottom .container-fluid{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#nav{
+    background:rgb(213, 222, 200);
+}
+
+#nav a img {
+    height: 70px;
+}
+
+#nav ul{
+    align-items: center;
+    margin: auto;
+}
+
+#nav ul li{
+    margin-left: 30px;
+    list-style: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#nav ul li a{
+    color: #2435d7;
+    border-radius: 20px; 
+    text-decoration: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+#nav ul li a:hover{
+    color: rgb(226, 40, 43);
+    background-color: white;
+}
+
+#nav ul li button{
+   padding: 6px 20px; 
+   border: 2px solid rgb(8, 63, 4);
+   background-color: #beb839;
+   color: white;
+   margin: 17px;
+   font-size: 1rem;
+   border-radius: 9px;
+   cursor: pointer;
+}
+
+.info_section .container-fluid{
+    background-color: moccasin;
+}
+
+.info_section h3 {
+    color: darkred;
+}
+
+.info_section .info_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info_section .info_container a {
+    font-size: 1rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: darkblue;
+}
+
+.info_section .info_container p{
+    color: darkblue;
+}
+
+.footer_section{
+    background-color: pink;
+}
+
+.footer_section .container{
+    align-items: center;
+    text-align: center;
+    color: orangered;
+    font-weight: bold;
+    
+}
+
+#contact .cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+    #contact .cont .card .card-body {
+        background-color: aqua;
+    }
